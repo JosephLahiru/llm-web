@@ -12,10 +12,10 @@ def sendPrompt(prompt):
     response = llm.invoke(prompt)
     return response
 
-st.title("Chat with Ollama")
+st.title("Chat With Joe's LLM")
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [
-        {"role":"assistant", "content":"Ask me a question !"}
+        {"role":"assistant", "content":"Yo, Dude. Ask me a question !"}
     ]
 
 if prompt := st.chat_input("Your Question"):
