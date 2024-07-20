@@ -21,7 +21,7 @@ if "messages" not in st.session_state.keys():
 if prompt := st.chat_input("Your Question"):
     st.session_state.message.append({"role": "user", "content": prompt})
 
-for message in st.session_state.message:
+for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
 
